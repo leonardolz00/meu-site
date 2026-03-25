@@ -3,26 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porta-Perfume 5ml Recarregável | Sua Fragrância Sempre com Você</title>
-    <meta name="description" content="Mini porta-perfume de 5ml compacto e elegante. Ideal para viagens e dia a dia. Garanta o seu atomizador recarregável agora!">
+    <title>Porta-Perfume Premium 5ml | Oferta Especial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 20px; background-color: #f9f9f9; }
-        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        img { max-width: 100%; height: auto; border-radius: 10px; margin-top: 15px; }
-        h1 { color: #333; }
-        p { color: #666; font-size: 1.1em; }
-        .botao { background-color: #25d366; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; font-weight: bold; }
+        :root {
+            --primary-color: #d4af37;
+            --secondary-color: #222;
+            --accent-color: #25d366;
+            --bg-color: #f4f4f4;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container { 
+            max-width: 420px; 
+            width: 100%;
+            background: white; 
+            padding: 40px 25px; 
+            border-radius: 20px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        h1 { 
+            color: var(--secondary-color); 
+            margin: 15px 0 10px;
+            font-size: 1.7rem;
+            line-height: 1.2;
+        }
+
+        .subtext { 
+            color: #777; 
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .product-image { 
+            width: 100%; 
+            border-radius: 15px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .price-container {
+            margin: 25px 0;
+            padding: 15px;
+            background: #fdfdfd;
+            border: 1px dashed #ddd;
+            border-radius: 12px;
+        }
+
+        .price-label {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .price-value {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            line-height: 1;
+        }
+
+        .features {
+            text-align: left;
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .features li {
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            color: #555;
+        }
+
+        .features li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .botao { 
+            background: var(--accent-color); 
+            color: white; 
+            padding: 18px; 
+            text-decoration: none; 
+            border-radius: 12px; 
+            display: block; 
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        .botao:hover { 
+            transform: translateY(-2px);
+            filter: brightness(1.05);
+        }
+
+        .footer-note {
+            font-size: 0.7rem;
+            color: #bbb;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <span class="badge">Oferta Imbatível</span>
         <h1>Porta-Perfume 5ml</h1>
-        <p>Praticidade e elegância para levar seu perfume favorito onde você for!</p>
+        <p class="subtext">Sua fragrância favorita sempre com você de forma prática e luxuosa.</p>
         
-        <img src="foto.jpg" alt="Porta Perfume 5ml">
+        <img src="foto.jpg" alt="Porta Perfume Recarregável" class="product-image">
 
-        <br>
-        <a href="https://wa.me/55XXXXXXXXXXX" class="botao">Chamar no WhatsApp</a>
-    </div>
-</body>
-</html>
+        <ul class="features">
+            <li>Recarregável e reutilizável</li>
+            <li>Tamanho ideal para viagens (5ml)</li>
+            <li>Sistema de spray de alta névoa</li>
+            <li>Design resistente e elegante</li>
+        </ul>
+
+        <div class="price-container">
+            <div class="price-label">Preço Unitário:</div>
+            <div class="price-value">R$ 4,
