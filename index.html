@@ -205,11 +205,13 @@
 
         .gallery-item img {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
+            height: 300px;           /* Aumentamos um pouco a altura */
+            object-fit: contain;     /* MUDANÇA AQUI: 'contain' mostra a foto inteira sem cortar */
+            background-color: #fff;  /* Adiciona um fundo branco se a foto for menor que o espaço */
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            padding: 10px;           /* Dá um respiro para a foto não colar na borda */
         }
 
         .gallery-item img:hover {
