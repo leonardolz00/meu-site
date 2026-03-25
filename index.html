@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Perfumes Store</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  font-size: 24px;
+  font-weight: bold;
+  color: gold;
+}
+
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.product {
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.price {
+  font-size: 28px;
+  color: gold;
+  margin: 10px 0;
+}
+
+.stock {
+  color: red;
+  font-weight: bold;
+}
+
+button {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.pix {
+  background: #00c853;
+  color: white;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.testimonial {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  margin-top: 40px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>Mini Perfumes Store</header>
+
+<div class="container">
+
+<div class="product">
+  <img src="foto.jpg" alt="Porta Perfume">
+  <h2>Porta Perfume Recarregável 5ml</h2>
+  <p>Frasco portátil de 5ml para levar seu perfume favorito para qualquer lugar. Compacto, elegante e fácil de recarregar.</p>  
+  <div class="price">R$ 4,50</div>
+  <div class="stock" id="stock">Apenas 48 unidades disponíveis</div>
+
+  <button onclick="comprar()">Adicionar ao Carrinho</button>
+
+  <button class="whatsapp" onclick="comprarWhatsapp()">Comprar pelo WhatsApp</button>
+
+  <button class="pix" onclick="mostrarPix()">Pagar com Pix</button>
+
+  <div id="pixInfo" style="display:none; margin-top:15px;">
+    <p><b>Chave Pix:</b> 11963156149</p>
+    <p>Envie o comprovante no WhatsApp</p>
+  </div>
+
+</div>
+
+<div class="section">
+  <h3>Benefícios</h3>
+  <ul>
+    <li>✔ Portátil e leve</li>
+    <li>✔ Ideal para viagens</li>
+    <li>✔ Economiza seu perfume</li>
+    <li>✔ Fácil de recarregar</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>Depoimentos</h3>
+  
+  <div class="testimonial">⭐️⭐️⭐️⭐️⭐️  
+  "Muito prático! Levo na bolsa todo dia!"</div>
+
+  <div class="testimonial">⭐️⭐️⭐️⭐️⭐️  
+  "Produto excelente e barato!"</div>
+
+  <div class="testimonial">⭐️⭐️⭐️⭐️⭐️  
+  "Comprei 3, recomendo demais!"</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Mini Perfumes Store - Todos os direitos reservados
+</footer>
+
+<script>
+let estoque = 48;
+
+function comprar() {
+  if (estoque > 0) {
+    estoque--;
+    document.getElementById("stock").innerText =
+      "Apenas " + estoque + " unidades disponíveis";
+    alert("Produto adicionado ao carrinho!");
+  } else {
+    alert("Produto esgotado!");
+  }
+}
+
+function comprarWhatsapp() {
+  let mensagem = "Olá, quero comprar o Porta Perfume 5ml por R$4,50";
+  window.open("https://wa.me/5511963156149?text=" + encodeURIComponent(mensagem));
+}
+
+function mostrarPix() {
+  document.getElementById("pixInfo").style.display = "block";
+}
+</script>
+
+</body>
+</html>
