@@ -3,164 +3,606 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porta-Perfume Premium 5ml | Oferta Especial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Porta-Perfume Premium 5ml | A Fragrância Perfeita em Suas Mãos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            --primary-color: #d4af37;
-            --secondary-color: #222;
-            --accent-color: #25d366;
-            --bg-color: #f4f4f4;
+            --primary-color: #d4af37; /* Dourado */
+            --secondary-color: #1a1a1a; /* Preto quase absoluto */
+            --accent-color: #25d366; /* Verde WhatsApp */
+            --bg-color-light: #f7f7f7;
+            --bg-color-dark: #eee;
+            --text-color-dark: #333;
+            --text-color-light: #666;
+            --border-color: #e0e0e0;
         }
 
-        body { 
-            font-family: 'Poppins', sans-serif; 
+        body {
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: var(--bg-color);
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 0;
+            background-color: var(--bg-color-light);
+            color: var(--text-color-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
-        .container { 
-            max-width: 420px; 
-            width: 100%;
-            background: white; 
-            padding: 40px 25px; 
-            border-radius: 20px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #333 100%);
+            color: white;
+            padding: 60px 0;
             text-align: center;
         }
 
-        .badge {
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-badge {
             background: var(--primary-color);
             color: white;
-            padding: 5px 15px;
+            padding: 8px 25px;
             border-radius: 50px;
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 1px;
-        }
-
-        h1 { 
-            color: var(--secondary-color); 
-            margin: 15px 0 10px;
-            font-size: 1.7rem;
-            line-height: 1.2;
-        }
-
-        .subtext { 
-            color: #777; 
-            font-size: 0.95rem;
             margin-bottom: 20px;
         }
 
-        .product-image { 
-            width: 100%; 
-            border-radius: 15px; 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-        }
-
-        .price-container {
-            margin: 25px 0;
-            padding: 15px;
-            background: #fdfdfd;
-            border: 1px dashed #ddd;
-            border-radius: 12px;
-        }
-
-        .price-label {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 5px;
-        }
-
-        .price-value {
-            font-size: 2.8rem;
+        .hero-title {
+            font-size: 3rem;
+            margin: 15px 0 10px;
             font-weight: 800;
-            color: var(--secondary-color);
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            margin-bottom: 40px;
+        }
+
+        .hero-price-container {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .hero-price-label {
+            font-size: 1rem;
+            color: #f0f0f0;
+            margin-bottom: 8px;
+        }
+
+        .hero-price-value {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
             line-height: 1;
         }
 
-        .features {
-            text-align: left;
-            margin: 20px 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .features li {
-            margin-bottom: 8px;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            color: #555;
-        }
-
-        .features li::before {
-            content: '✓';
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .botao { 
-            background: var(--accent-color); 
-            color: white; 
-            padding: 18px; 
-            text-decoration: none; 
-            border-radius: 12px; 
-            display: block; 
-            font-weight: 600;
-            font-size: 1.1rem;
+        .hero-cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 12px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.3);
+            margin-top: 15px;
         }
 
-        .botao:hover { 
-            transform: translateY(-2px);
-            filter: brightness(1.05);
+        .hero-cta-button:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
         }
 
-        .footer-note {
-            font-size: 0.7rem;
-            color: #bbb;
-            margin-top: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        /* Section General Styling */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section-light {
+            background-color: var(--bg-color-light);
+        }
+
+        .section-dark {
+            background-color: var(--bg-color-dark);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-color-light);
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: left;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-item h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-color-light);
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Testimonials Section */
+        .testimonial-carousel {
+            display: flex;
+            overflow-x: auto; /* Permite rolagem horizontal se muitos depoimentos */
+            gap: 30px;
+            padding-bottom: 20px; /* Para a barra de rolagem */
+            -webkit-overflow-scrolling: touch; /* Rolagem suave em iOS */
+            scroll-snap-type: x mandatory; /* Para centralizar os itens ao rolar */
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            flex: 0 0 320px; /* Fixa a largura de cada card */
+            scroll-snap-align: start; /* Alinha o início do card */
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--text-color-dark);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 1rem;
+        }
+
+        .testimonial-rating {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            content: '-';
+            transform: rotate(0deg); /* Já é um "-" */
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: var(--text-color-light);
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .faq-answer.open {
+            max-height: 150px; /* Ajuste conforme o maior texto possível */
+        }
+
+
+        /* Guarantee Section */
+        .guarantee-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .guarantee-section i {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .guarantee-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .guarantee-section p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Call to Action Final */
+        .final-cta {
+            background: var(--secondary-color);
+            color: white;
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+
+        /* Footer */
+        .footer {
+            background: #111;
+            color: #aaa;
+            padding: 40px 0;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            .hero-price-value {
+                font-size: 2.8rem;
+            }
+            .hero-cta-button {
+                font-size: 1rem;
+                padding: 15px 30px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .features-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonial-carousel {
+                flex-direction: column;
+                align-items: center;
+            }
+            .testimonial-card {
+                flex: 0 0 90%;
+            }
+            .final-cta h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <span class="badge">Oferta Imbatível</span>
-        <h1>Porta-Perfume 5ml</h1>
-        <p class="subtext">Sua fragrância favorita sempre com você de forma prática e luxuosa.</p>
-        
-        <img src="foto.jpg" alt="Porta Perfume Recarregável" class="product-image">
 
-        <ul class="features">
-            <li>Recarregável e reutilizável</li>
-            <li>Tamanho ideal para viagens (5ml)</li>
-            <li>Sistema de spray de alta névoa</li>
-            <li>Design resistente e elegante</li>
-        </ul>
+    <section class="hero-section">
+        <div class="container hero-content">
+            <span class="hero-badge">Exclusividade e Conveniência</span>
+            <h1 class="hero-title">Seu Perfume Favorito, Sempre Com Você!</h1>
+            <p class="hero-subtitle">Descubra o Porta-Perfume Premium 5ml, a solução perfeita para levar sua fragrância onde quiser, com estilo e praticidade inigualáveis.</p>
+            
+            <img src="https://via.placeholder.com/400x400/d4af37/ffffff?text=Porta-Perfume+Premium" alt="Porta Perfume Recarregável Premium" class="hero-image">
+            
+            <div class="hero-price-container">
+                <div class="hero-price-label">Preço Imperdível:</div>
+                <div class="hero-price-value">R$ 4,40</div>
+                <div class="hero-price-label">Garanta o seu hoje mesmo!</div>
+            </div>
 
-       <div class="price-container">
-            <div class="price-label">Preço Unitário:</div>
-            <div class="price-value">R$ 4,90</div>
-            <div class="price-label">Garanta o seu antes que acabe!</div>
+            <a href="https://wa.me/5500000000000?text=Olá! Tenho interesse no Porta-Perfume Premium de 5ml que vi no site." class="hero-cta-button">
+                COMPRAR AGORA VIA WHATSAPP
+            </a>
+            <p style="margin-top: 15px; color: #f0f0f0; font-size: 0.9rem;">Oferta por tempo limitado. Peça já!</p>
         </div>
+    </section>
 
-        <a href="https://wa.me/551163156149?text=Olá! Tenho interesse no Porta-Perfume de 5ml" class="botao">
-            COMPRAR AGORA
-        </a>
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Por Que Escolher o Porta-Perfume Premium?</h2>
+            <p class="section-subtitle">Design sofisticado e funcionalidade pensada para o seu dia a dia.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-redo-alt"></i>
+                    <h3>Recarregável Ilimitado</h3>
+                    <p>Encha e use quantas vezes quiser. Compatível com a maioria dos frascos de perfume.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-plane-departure"></i>
+                    <h3>Ideal para Viagens (5ml)</h3>
+                    <p>Compacto e aprovado para levar na bagagem de mão. Sua fragrância favorita sempre com você.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Spray de Alta Névoa</h3>
+                    <p>Distribuição uniforme e delicada, para uma aplicação perfeita a cada uso.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-gem"></i>
+                    <h3>Design Luxuoso e Durável</h3>
+                    <p>Feito com materiais de alta qualidade, resistente e elegante, complementa seu estilo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <p class="footer-note">Estoque limitado • Envio para todo Brasil</p>
-    </div>
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Detalhes Que Encantam</h2>
+            <p class="section-subtitle">Veja de perto a qualidade e o design exclusivo do nosso Porta-Perfume.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/250x250/d4af37/ffffff?text=Porta-Perfume+Dourado" alt="Porta Perfume Dourado">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/250x250/cccccc/333333?text=Porta-Perfume+Prateado" alt="Porta Perfume Prateado">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/250x250/222222/ffffff?text=Porta-Perfume+Preto" alt="Porta Perfume Preto">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/250x250/ffb6c1/ffffff?text=Porta-Perfume+Rosa" alt="Porta Perfume Rosa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+            <p class="section-subtitle">Confira a satisfação de quem já transformou seu dia a dia com o Porta-Perfume Premium.</p>
+            
+            <div class="testimonial-carousel">
+                <div class="testimonial-card">
+                    <p>"Perfeito para carregar na bolsa! Pequeno, discreto e não vaza nada. Amei demais!"</p>
+                    <div class="testimonial-author">Ana C.</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Nunca mais viajo sem ele! Economiza espaço e é super fácil de recarregar. Recomendo muito!"</p>
+                    <div class="testimonial-author">Bruno M.</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Presenteei minha esposa e ela adorou! O design é lindo e o spray é muito bom. Excelente custo-benefício."</p>
+                    <div class="testimonial-author">Carlos P.</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                 <div class="testimonial-card">
+                    <p>"Chegou super rápido e é exatamente como na descrição. A qualidade é impressionante pelo preço."</p>
+                    <div class="testimonial-author">Fernanda S.</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Tire suas dúvidas e garanta sua compra com total segurança.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Como faço para recarregar o porta-perfume?</h3>
+                    <div class="faq-answer">
+                        É muito simples! Na parte inferior do porta-perfume, há um pequeno orifício. Basta alinhar este orifício com o borrifador do seu frasco de perfume original e pressionar para baixo algumas vezes. O líquido será transferido sem vazamentos.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Ele vaza ou estraga o perfume?</h3>
+                    <div class="faq-answer">
+                        Não! O Porta-Perfume Premium foi projetado com um sistema de vedação que garante que não haja vazamentos. Além disso, o material de alta qualidade não reage com o perfume, mantendo a integridade da sua fragrância.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Qual é a capacidade e o tamanho?</h3>
+                    <div class="faq-answer">
+                        Ele possui capacidade de 5ml, ideal para até 50 borrifadas, dependendo do perfume. Seu tamanho compacto (aprox. 8cm de altura por 1.7cm de diâmetro) é perfeito para levar na bolsa, bolso ou necessaire.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Tem garantia?</h3>
+                    <div class="faq-answer">
+                        Sim! Oferecemos garantia de 7 dias para defeitos de fabricação. Sua satisfação é nossa prioridade.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee-section">
+        <div class="container">
+            <i class="fas fa-shield-alt"></i>
+            <h2>Sua Satisfação é Nossa Garantia</h2>
+            <p>Compre com confiança! Se por qualquer motivo você não ficar satisfeito com seu Porta-Perfume Premium, oferecemos uma garantia de devolução do dinheiro em 7 dias.</p>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Não Perca Mais Tempo!</h2>
+            <p>Tenha a liberdade de levar seu perfume favorito para qualquer lugar. Clique no botão abaixo e garanta o seu Porta-Perfume Premium agora mesmo!</p>
+            
+            <a href="https://wa.me/5500000000000?text=Olá! Quero aproveitar a oferta do Porta-Perfume Premium por R$ 4,40." class="hero-cta-button">
+                QUERO MEU PORTA-PERFUME AGORA
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">Estoque limitado. Garanta a sua cor favorita!</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Porta-Perfume Premium. Todos os direitos reservados.</p>
+            <p>
+                <a href="#">Termos de Uso</a> | 
+                <a href="#">Política de Privacidade</a>
+            </p>
+            <p style="margin-top: 10px;">Enviamos para todo o Brasil com rapidez e segurança.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                
+                // Fecha outros FAQs abertos (opcional)
+                document.querySelectorAll('.faq-answer').forEach(el => {
+                    if (el !== answer) {
+                        el.classList.remove('open');
+                        el.previousElementSibling.classList.remove('active');
+                    }
+                });
+
+                // Alterna o atual
+                answer.classList.toggle('open');
+                question.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
