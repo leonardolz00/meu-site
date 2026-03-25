@@ -76,12 +76,14 @@
         }
 
         .hero-image {
-            width: 80%;
-            max-width: 400px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            margin-bottom: 40px;
-        }
+    width: 100%;
+    max-width: 280px; /* Aqui controlamos o tamanho real */
+    height: auto;     /* Isso impede que a foto fique "achatada" */
+    display: block;
+    margin: 0 auto 30px auto; /* Centraliza e dá espaço embaixo */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
         .hero-price-container {
             background: rgba(255, 255, 255, 0.1);
